@@ -1,0 +1,17 @@
+body {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: repeat(12, 1fr);
+}
+
+main {
+    grid-column: 6 / 8;
+    grid-row: 4 / 6;
+}
+
+#button {
+    grid-column: 12 / 13;
+    grid-row: 12 / 13;
+    width: fit-content;
+    height: fit-content;
+}
