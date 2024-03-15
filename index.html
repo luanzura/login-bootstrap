@@ -9,20 +9,49 @@
     <title>Login Account</title>
 </head>
 <body class="bg-secondary-subtle" style="height: 100vh;">
-    <main>
-        <div class="container d-flex flex-column justify-content-center align-items-center bg-light-subtle shadow mb-5 rounded me-auto" style="width: 310px; height: 370px;">
-            <span class="material-symbols-outlined mt-3 display-4" style="font-size: 48px;">transcribe</span> 
+    <div class="container d-flex justify-content-center align-items-center" style="height: 90vh;">
+        <div id="sign-in" class="container flex-column justify-content-center align-items-center bg-light-subtle shadow mb-5 rounded me-auto" style="width: 310px; height: 370px;">
+            <span class="material-symbols-outlined mt-3" style="font-size: 48px;">transcribe</span> 
             <form>
             <div class="pt-3"><label for="email">Email</label></div>
             <div class="col text-center"><input class="form-control mt-1" type="email" name="email" id="email" style="width: 240px;"></div>
             <div class="pt-3"><label for="password">Password</label></div>
-            <div class="col text-center"><input class="form-control mt-1" type="password" name="password" id="password" style="width: 240px;"></div>
+            <div class="col text-center"><input class="form-control mt-1" type="password" name="password" style="width: 240px;"></div>
             <div class="col text-center pb-3"><button class="btn btn-primary mt-4" style="width: 150px;">Sign in</button></div>
-            <div><p class="text-center mb-2">Don't have a account? <a href="#">Sign Up</a></p>  </div>                 
+            <div><p class="text-center mb-2">Don't have a account? <span class="sign-up" onclick="signUp()">Sign-up</span>  </div>                 
             </form>
         </div>
-    </main>
-    <div class="container-fluid bg-light-subtle shadow rounded pt-1" id="button">
+        <div id="sign-up" class="container flex-column justify-content-center align-items-center bg-light-subtle shadow mb-5 rounded me-auto" style="width: 510px; height: 570px;">
+            <span class="material-symbols-outlined mb-5" style="font-size: 48px;">transcribe</span> 
+            <form class="form-up d-flex flex-column align-items-center">
+                <div class="names d-flex mb-3">
+                    <div class="first-name">
+                        <label for="first-name">First Name</label>
+                        <input class="form-control mt-1" type="text" placeholder="First Name" name="first-name">
+                    </div>
+                    <div class="secont-name">    
+                        <label for="last-name">Last Name</label>
+                        <input class="form-control mt-1" type="text" placeholder="Last Name" name="last-name">
+                    </div>    
+                </div>
+                <div>    
+                    <label for="email-up">Email</label>
+                    <input class="mb-3 form-control mt-1" type="email" placeholder="Email" name="email-up" style="width: 425px;"> 
+                </div>       
+                <div>
+                    <label for="password-up">Password</label>
+                    <input class="mb-3 form-control mt-1" id="password" type="password" placeholder="Password" name="password-up" style="width: 425px;">
+                </div> 
+                <div>   
+                    <label for="c-password-up">Confirm Password <span id="password-confirm-warning" style="display: none; color: rgb(199, 0, 0); padding-left: 15px;">*passwords do not match!</span></label>
+                    <input class="mb-3 form-control mt-1" id="confirm_password" type="password" placeholder="Confirm Password" name="c-password-up" style="width: 425px;">
+                </div>    
+                <button class="align-self-center btn btn-primary mt-4" onclick="register()" style="width: 150px;">Sign up</button>
+                <p class="text-center mt-4">Have a account? <span class="sign-up" onclick="signIn()">Sign-in</span>                   
+            </form>
+        </div>
+    </div>
+    <div class="d-flex justify-content-end bg-light-subtle shadow rounded p-2 m-3" style="width: fit-content;" id="button">
         <span id="color-mode-toggle" class="material-symbols-outlined text-center" style="font-size: 40px; cursor: pointer;">light_mode</span>
     </div>
     <script src="script.js"></script>

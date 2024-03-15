@@ -1,17 +1,27 @@
-body {
-    display: grid;
-    grid-template-columns: repeat(12, 1fr);
-    grid-template-rows: repeat(12, 1fr);
+.sign-up {
+    cursor: pointer;
+    color: rgb(80, 80, 199);
+    text-decoration: underline;
 }
 
-main {
-    grid-column: 6 / 8;
-    grid-row: 4 / 6;
+#sign-in {
+    display: none;
+    animation: appear 0.3s ease-in-out;
+
 }
 
-#button {
-    grid-column: 12 / 13;
-    grid-row: 12 / 13;
-    width: fit-content;
-    height: fit-content;
+#sign-up {
+    display: flex;
+    flex-wrap: wrap;
+    animation: appear 0.3s ease-in-out;
+
+}
+
+.names {
+    column-gap: 10px;
+}
+
+@keyframes appear {
+    from { opacity: 0; }
+    to { opacity: 1; }
 }
