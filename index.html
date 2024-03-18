@@ -21,33 +21,35 @@
             <div><p class="text-center mb-2">Don't have a account? <span class="sign-up" onclick="signUp()">Sign-up</span>  </div>                 
             </form>
         </div>
-        <div id="sign-up" class="container flex-column justify-content-center align-items-center bg-light-subtle shadow mb-5 rounded me-auto" style="width: 510px; height: 570px;">
-            <span class="material-symbols-outlined mb-5" style="font-size: 48px;">transcribe</span> 
-            <form class="form-up d-flex flex-column align-items-center">
-                <div class="names d-flex mb-3">
-                    <div class="first-name">
+        <div id="sign-up" class="container col-lg-6 flex-column justify-content-center align-items-center bg-light-subtle shadow mb-5 rounded" style="height: 600px;">
+            <span class="material-symbols-outlined mb-1" style="font-size: 48px;">transcribe</span> 
+            <form class="form-up col-12 p-3">
+                <div class="row pb-3">
+                    <div class="first-name col-6">
                         <label for="first-name">First Name</label>
                         <input class="form-control mt-1" type="text" placeholder="First Name" name="first-name">
                     </div>
-                    <div class="secont-name">    
+                    <div class="secont-name col-6">    
                         <label for="last-name">Last Name</label>
                         <input class="form-control mt-1" type="text" placeholder="Last Name" name="last-name">
                     </div>    
-                </div>
-                <div>    
+                </div>           
+                <div class="col-12">    
                     <label for="email-up">Email</label>
-                    <input class="mb-3 form-control mt-1" type="email" placeholder="Email" name="email-up" style="width: 425px;"> 
+                    <input class="mb-3 form-control mt-1" type="email" placeholder="Email" name="email-up"> 
                 </div>       
-                <div>
+                <div class="col-12">
                     <label for="password-up">Password</label>
-                    <input class="mb-3 form-control mt-1" id="password" type="password" placeholder="Password" name="password-up" style="width: 425px;">
+                    <input class="mb-3 form-control mt-1" id="password" type="password" placeholder="Password" name="password-up">
                 </div> 
-                <div>   
+                <div class="col-12">   
                     <label for="c-password-up">Confirm Password <span id="password-confirm-warning" style="display: none; color: rgb(199, 0, 0); padding-left: 15px;">*passwords do not match!</span></label>
-                    <input class="mb-3 form-control mt-1" id="confirm_password" type="password" placeholder="Confirm Password" name="c-password-up" style="width: 425px;">
+                    <input class="mb-3 form-control mt-1" id="confirm_password" type="password" placeholder="Confirm Password" name="c-password-up">
+                </div>
+                <div class="col-12 text-center">    
+                    <button class="align-self-center btn btn-primary mt-4" onclick="register()" style="width: 150px;">Sign up</button>
                 </div>    
-                <button class="align-self-center btn btn-primary mt-4" onclick="register()" style="width: 150px;">Sign up</button>
-                <p class="text-center mt-4">Have a account? <span class="sign-up" onclick="signIn()">Sign-in</span>                   
+                <p class="text-center mt-5">Have a account? <span class="sign-up" onclick="signIn()">Sign-in</span>                   
             </form>
         </div>
     </div>
