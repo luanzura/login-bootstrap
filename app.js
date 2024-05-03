@@ -43,8 +43,8 @@ app.post("/register", async (req, res) => {
     } else {
 
     // Se o email não está em uso, prosseguir com o registro
-    const insertQuery = 'INSERT INTO users (email, password) VALUES ($1, $2)';
-    await db.query(insertQuery, [email, password]);
+    const insertQuery = 'INSERT INTO users (first_name, second_name, email, password) VALUES ($1, $2, $3, $4)';
+    await db.query(insertQuery, [fName, lName, email, password]);
     console.log("Usuário registrado com sucesso:", email);
     res.send("Registro bem-sucedido!");
     }
@@ -57,13 +57,17 @@ app.post("/register", async (req, res) => {
 app.post("/login", async (req, res) => {
   const email = req.body.email;
   const password =req.body.password;
+
   try {
+    // Verifica se email existe
     const checkQuery = 'SELECT * FROM users WHERE email = $1';
     const checkResult = await db.query(checkQuery, [email]);
 
     if (checkResult.rows.length > 0) {
       const user = checkResult.rows[0];
       const storedPassword = user.password;
+
+      //Verifica se password é igual ao password do email
       if (password === storedPassword){
         res.send("Login efetuado com sucesso.")
       } else {
