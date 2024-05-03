@@ -1,33 +1,32 @@
 <%- include('parts/header.ejs') %>
 
-<body class="bg-secondary-subtle pt-5" style="height: 100vh;">
-  <div id="sign-up" class="container col-lg-6 flex-column justify-content-center align-items-center bg-light-subtle shadow mb-5 rounded mt-5 pt-3" style="height: 480px;">
-    <span class="material-symbols-outlined mb-1" style="font-size: 48px;">transcribe</span> 
-    <form class="form-up col-12 p-3" action="/register" method="POST">
-        <div class="row pb-3">
-            <div class="first-name col-6">
-                <label for="first-name">First Name</label>
-                <input class="form-control mt-1" type="text" placeholder="First Name" name="firstName">
-            </div>
-            <div class="secont-name col-6">    
-                <label for="last-name">Last Name</label>
-                <input class="form-control mt-1" type="text" placeholder="Last Name" name="lastName">
-            </div>    
-        </div>           
-        <div class="col-12">    
-            <label for="email-up">Email</label>
-            <input class="mb-3 form-control mt-1" type="email" placeholder="Email" name="email"> 
-        </div>       
-        <div class="col-12">
-            <label for="password-up">Password</label>
-            <input class="mb-3 form-control mt-1" id="password" type="password" placeholder="Password" name="password">
+<body>
+    <div class="row d-flex justify-content-center align-items-center" style="height: 100vh; width: 100%; background-color: #212529;">
+        <div class="col-3 border border-secondary border-1 rounded p-4 shadow-lg" style="background-color: #2B3035;">
+            <form action="/register" method="POST">
+                <div class="row g-2">
+                    <div class="col-6">
+                        <div class="input-group">
+                            <span class="input-group-text" id="basic-addon1"><i class="bi bi-person-vcard"></i></span>
+                            <input type="text" class="form-control" name="first_name" placeholder="primeiro nome" aria-label="Nome" aria-describedby="basic-addon1">
+                        </div>
+                    </div>
+                    <div class="col-6">
+                        <div class="input-group">
+                            <input type="text" class="form-control" name="last_name" placeholder="segundo nome" aria-label="Nome" aria-describedby="basic-addon2">
+                        </div>
+                    </div>
+                        <div class="input-group">
+                            <span class="input-group-text" id="basic-addon3"><i class="bi bi-person"></i></span>
+                            <input type="email" class="form-control" placeholder="nome@email.com" name="email" aria-label="Email" aria-describedby="basic-addon3">
+                        </div>
+                        <div class="input-group">
+                            <span class="input-group-text" id="basic-addon4"><i class="bi bi-key"></i></span>
+                            <input type="password" class="form-control" name="password" placeholder="senha" aria-label="Senha" aria-describedby="basic-addon4">
+                        </div>
+                    <div class="col text-center pb-3"><button class="btn btn-primary mt-4" type="submit" style="width: 150px;">Register</button></div>   
+                </div>    
+            </form>
         </div>
-        <div class="col text-center pb-3"><button class="btn btn-primary mt-4" type="submit" style="width: 150px;">Register</button></div>    
-        <div>
-          <p class="text-center mb-2">Have a account? 
-              <a href="/" class="sign-up">Sign-in</a>
-          </p>
-        </div>                     
-    </form>
-  </div>
+    </div>
 </body>
