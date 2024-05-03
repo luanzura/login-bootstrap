@@ -1,0 +1,9 @@
+.sign-up {
+    cursor: pointer;
+    color: rgb(80, 80, 199);
+    text-decoration: underline;
+}
+
+.names {
+    column-gap: 10px;
+}

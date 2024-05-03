@@ -1,0 +1,33 @@
+<%- include('parts/header.ejs') %>
+
+<body class="bg-secondary-subtle" style="height: 100vh;">
+  <div id="sign-up" class="container col-lg-6 flex-column justify-content-center align-items-center bg-light-subtle shadow mb-5 rounded mt-5 pt-3" style="height: 480px;">
+    <span class="material-symbols-outlined mb-1" style="font-size: 48px;">transcribe</span> 
+    <form class="form-up col-12 p-3" action="/register" method="POST">
+        <div class="row pb-3">
+            <div class="first-name col-6">
+                <label for="first-name">First Name</label>
+                <input class="form-control mt-1" type="text" placeholder="First Name" name="firstName">
+            </div>
+            <div class="secont-name col-6">    
+                <label for="last-name">Last Name</label>
+                <input class="form-control mt-1" type="text" placeholder="Last Name" name="lastName">
+            </div>    
+        </div>           
+        <div class="col-12">    
+            <label for="email-up">Email</label>
+            <input class="mb-3 form-control mt-1" type="email" placeholder="Email" name="email"> 
+        </div>       
+        <div class="col-12">
+            <label for="password-up">Password</label>
+            <input class="mb-3 form-control mt-1" id="password" type="password" placeholder="Password" name="password">
+        </div>
+        <div class="col text-center pb-3"><button class="btn btn-primary mt-4" type="submit" style="width: 150px;">Register</button></div>    
+        <div>
+          <p class="text-center mb-2">Have a account? 
+              <a href="/" class="sign-up">Sign-in</a>
+          </p>
+        </div>                     
+    </form>
+  </div>
+</body>

@@ -1,0 +1,21 @@
+<%- include('parts/header.ejs') %>
+
+<body class="bg-secondary-subtle" style="height: 100vh;">
+    <div class="container d-flex justify-content-center align-items-center" style="height: 90vh;">
+        <div id="sign-in" class="container flex-column justify-content-center align-items-center bg-light-subtle shadow mb-5 rounded me-auto" style="width: 310px; height: 370px;">
+            <span class="material-symbols-outlined mt-3" style="font-size: 48px;">transcribe</span> 
+            <form action="/login" method="POST">
+                <div class="pt-3"><label for="email">Email</label></div>
+                <div class="col text-center"><input class="form-control mt-1" type="email" name="email" style="width: 240px;"></div>
+                <div class="pt-3"><label for="password">Password</label></div>
+                <div class="col text-center"><input class="form-control mt-1" type="password" name="password" style="width: 240px;"></div>
+                <div class="col text-center pb-3"><button class="btn btn-primary mt-4" type="submit" style="width: 150px;">Login</button></div>
+                <div>
+                    <p class="text-center mb-2">Don't have an account? 
+                        <a href="/register" class="sign-up">Sign-up</a>
+                    </p>
+                </div>
+            </form>
+        </div>
+    </div>
+</body>
